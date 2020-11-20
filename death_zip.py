@@ -16,10 +16,18 @@ def banner():
                                                                                              			)
 
 
-def zip_file_maker():
+def main_file_maker():
 	os.mkdir("0")
-	for i in range(1):
+	for i in range(100):
 		file = open("0/%i" %i, "w")
 		file.write("0" * 1024 * 1024 * 1)
-		for folders in range(1):		
+		# for folders in range(1):
+	
 	file.close()
+
+def zipping_folders():
+	shutil.make_archive("0/", "zip")
+
+
+main_file_maker()
+zipping_folders()

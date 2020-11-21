@@ -26,8 +26,13 @@ def main_file_maker():
 	file.close()
 
 def zipping_folders():
-	shutil.make_archive("0/", "zip")
+	shutil.make_archive("0", "zip", "0/")
 
+def copping_a_flie():
+	os.mkdir("this")
+	for i in range(10):
+		shutil.copy("0.zip", "this/%i.zip" %i)
 
 main_file_maker()
 zipping_folders()
+copping_a_flie()

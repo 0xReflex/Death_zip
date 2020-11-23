@@ -1,7 +1,8 @@
 import zipfile
 import os
 import shutil
-
+from string import ascii_lowercase
+import random
 
 def banner(): 
 	print(
@@ -33,6 +34,11 @@ def copping_a_flie():
 	for i in range(10):
 		shutil.copy("0.zip", "this/%i.zip" %i)
 
-main_file_maker()
-zipping_folders()
-copping_a_flie()
+def random_name():
+	random_names = ascii_lowercase
+	this = random.choices(random_names, k=26)
+	print(''.join(this))
+# main_file_maker()
+# zipping_folders()
+# copping_a_flie()
+random_name()

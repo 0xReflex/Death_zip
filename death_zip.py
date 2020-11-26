@@ -36,9 +36,22 @@ def copping_a_flie():
 
 def random_name():
 	random_names = ascii_lowercase
-	this = random.choices(random_names, k=26)
+	this = random.choices(random_names, k=5)
 	print(''.join(this))
+
 # main_file_maker()
 # zipping_folders()
 # copping_a_flie()
-random_name()
+# random_name()
+# banner()
+def remove_folder(name_of_the_folder): 
+	#it will remove all folder expect one which is passed
+	# in the fucntion 
+	folder_file = "this/"
+	for file in os.listdir(folder_file):
+		if file == name_of_the_folder:
+			continue
+		else:
+			os.remove(os.path.join(folder_file, file))
+
+remove_all_folder_expect_one("right")

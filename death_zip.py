@@ -54,4 +54,9 @@ def remove_folder(name_of_the_folder):
 		else:
 			os.remove(os.path.join(folder_file, file))
 
-remove_all_folder_expect_one("right")
+def copying_zipped_folder(name_of_the_folder):
+	for i in range(10):
+		print("this%s%i" % (name_of_the_folder ,i))
+		shutil.copy(name_of_the_folder, "this/%s%i.zip"% (name_of_the_folder, i))
+# remove_all_folder_expect_one("right")
+copying_zipped_folder("this")
